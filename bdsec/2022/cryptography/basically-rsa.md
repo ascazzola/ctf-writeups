@@ -16,4 +16,6 @@ Flag Format : BDSEC{fl4g_h3r3}
 
 ## Steps done
 
-//TODO
+1. The clue here is we know the value of the parameter `N`. `N` and `P` must be secret to ensure the security of RSA.
+2. We visited this url https://www.dcode.fr/rsa-cipher 
+3. We filled the parameters and we get the flag `BDSEC{r54_i5_fUn_r16h7?}`
