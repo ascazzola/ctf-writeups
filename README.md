@@ -1,2 +1,2 @@
 # ctf-writeups
-CTFS writeups
+CTF writeups
